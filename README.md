@@ -1,0 +1,1 @@
+Questi script sono a puro scopo informativo, potete usarlo personalmente ma non usatelo per scopi illeciti.
