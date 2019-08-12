@@ -69,10 +69,11 @@ def getRegistryValues(HexRID):
     os.system('powershell -enc '+ str(base64.b64encode(fixpermissions.encode('utf_16_le'))).replace('b\'','').replace('\'',''))
     
     ## Uso le Windows API per ottenere i valori "Class Name" di JD, Skew1, GBG e Data
-    jd = getRegClass('JD')
-    skew1 = getRegClass('Skew1')
-    gbg = getRegClass('GBG')
-    data = getRegClass('Data')
+    jd = str(getRegClass('JD')).replace('b\'','').replace('\'','')
+    print(jd)
+    skew1 = str(getRegClass('Skew1')).replace('b\'','').replace('\'','')
+    gbg = str(getRegClass('GBG')).replace('b\'','').replace('\'','')
+    data = str(getRegClass('Data')).replace('b\'','').replace('\'','')
     return str(HexRegHash.strip()), str(HexRegSysk.strip()), jd, skew1, gbg, data
 
 ## Dati e key sono stringhe esadecimali  ('ABCDEFGH')
